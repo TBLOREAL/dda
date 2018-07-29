@@ -1,38 +1,23 @@
-[![Built with pwa–starter–kit](https://img.shields.io/badge/built_with-pwa–starter–kit_-blue.svg)](https://github.com/Polymer/pwa-starter-kit "Built with pwa–starter–kit")
-[![Build status](https://api.travis-ci.org/Polymer/pwa-starter-kit.svg?branch=master)](https://travis-ci.org/Polymer/pwa-starter-kit)
+# Installing dependencies
+To install the project’s dependencies, run
+> npm install
+You’re now ready to run and see your app!
 
-> ## 🛠 Status: In Development
-> PWA Starter Kit is currently in development. It's on the fast track to a 1.0 release, so we encourage you to use it and give us your feedback, but there are things that haven't been finalized yet and you can expect some changes.
->
-> See the list of Known Issues and TODOs, below, for updates.
+# Run the app in development mode
+To run the app locally, run
+> npm start
+This will start a local server on port 8081. Open http://localhost:8081 to view your app in the browser. Note that this server can continue running as you’re making changes to your application, which you will see if you refresh the browser tab.
+If the port is already taken on your computer, or if you need to change the default hostname (because you’re using a Docker container, for example), you can configure them using command line arguments:
+> npm start -- --hostname 0.0.0.0 --port 4444
 
-# PWA Starter Kit
+# Run the tests
+Check out the Application testing page for more information about the tests. For a quick way to run the tests, run
+> npm run test
 
-This sample app is a starting point for building PWAs. Out of the box, the template
-gives you the following features:
-- all the PWA goodness (manifest, service worker)
-- a responsive layout
-- application theming
-- example of using Redux for state management
-- offline UI
-- simple routing solution
-- fast time-to-interactive and first-paint through the PRPL pattern
-- easy deployment to prpl-server or static hosting
-- unit and integrating testing starting points
-- documentation about other advanced patterns.
-
-### 📖 Head over to the [documentation site](https://polymer.github.io/pwa-starter-kit/) for more details or check out [how to get started](https://polymer.github.io/pwa-starter-kit/setup/)!
-
-![pwa-starter-kit screenshot](https://user-images.githubusercontent.com/1369170/39715580-a1be5126-51e2-11e8-8440-96b07be03a3c.png)
-
-## Known issues
-
-These are high priority and currently being worked on, and they will all be fixed before the 1.0 release:
-
-- `lit-element` and `lit-html` have IE11 compatibility issues.
-
-## TODOs
-
-- [x] Setup Safari testing on Travis.
-- [x] Deploy all templates as demos.
-- [ ] Update to latest [Material Web Components](https://github.com/material-components/material-components-web-components).
+# Available scripts
+In the app’s root directory you can run:
+- npm start to run the application in development mode.
+- npm run test to run the application’s unit and integration tests (see the see the testing section for more details. To run just the unit or integration tests, both npm run test:unit and npm run test:integration are available.
+- npm run build to build your application for production (see the building and deploying section for more details).
+- npm run serve:static or npm run serve:prpl-server to serve the built application (see the building and deploying section for more details).
+The complete list of scripts can be found in the package.json file.
